@@ -8,7 +8,11 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+// Middleware
+app.use(cors({
+  origin: "*"
+}));
+
 app.use(express.json());
 
 // Routes
@@ -16,6 +20,14 @@ app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/projects", require("./routes/projectRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`);
+// Default route (helps testing on Render)
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
+// ✅ FIXED PORT
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
