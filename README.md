@@ -169,3 +169,27 @@ After adding README:
 git add .
 git commit -m "Added README"
 git push
+
+## 🌐 Live Demo
+
+🔗 Frontend (User Interface):  
+https://team-task-manager-9wc79atk9-priya-kumaris-projects-77f35f3b.vercel.app/
+
+🔗 Backend (API Server):  
+https://team-task-manager-priya.onrender.com
+
+> ⚠️ Note: Backend is hosted on Render free tier, so it may take 20–30 seconds to respond on first request.
+
+---
+
+## 🚀 How to Use
+
+1. Open the frontend link  
+2. Signup as a new user  
+3. Login to your account  
+4. Create a project (Admin role)  
+5. Add and manage tasks  
+6. Track progress on dashboard  
+
+---
+
